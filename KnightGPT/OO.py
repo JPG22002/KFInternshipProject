@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Define the hardcoded principles for positive and critical analysis
 PRINCIPLES_POSITIVE = """
