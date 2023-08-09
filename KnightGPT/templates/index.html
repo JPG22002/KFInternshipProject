@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnightGPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>KnightGPT</h1>
+        <form action="/" method="post">
+            <div>
+                <label for="grantee">Grantee:</label><br>
+                <input type="text" id="grantee" name="grantee" required>
+            </div>
+            <div>
+                <label for="annual_budget">Annual Budget:</label><br>
+                <input type="text" id="annual_budget" name="annual_budget" required>
+            </div>
+            <div>
+                <label for="grant_amount">Grant Amount:</label><br>
+                <input type="text" id="grant_amount" name="grant_amount" required>
+            </div>
+            <div>
+                <label for="project_cost">Project Cost:</label><br>
+                <input type="text" id="project_cost" name="project_cost" required>
+            </div>
+            <div>
+                <label for="idea">Idea:</label><br>
+                <textarea id="idea" name="idea" required></textarea>
+            </div>
+            <div>
+                <label for="opportunity_approach">Opportunity Approach:</label><br>
+                <textarea id="opportunity_approach" name="opportunity_approach" required></textarea>
+            </div>
+            <div>
+                <label for="desired_impact">Desired Impact:</label><br>
+                <textarea id="desired_impact" name="desired_impact" required></textarea>
+            </div>
+            <div>
+                <label for="strategy_alignment">Strategy Alignment:</label><br>
+                <textarea id="strategy_alignment" name="strategy_alignment" required></textarea>
+            </div>
+            <div>
+                <label for="prior_funding">Prior Funding (yes/no):</label><br>
+                <input type="text" id="prior_funding" name="prior_funding" required>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

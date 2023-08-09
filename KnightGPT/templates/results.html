@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+
+        <div class="results">
+            <h2>General Assessment</h2>
+            <h3>Positive Analysis</h3>
+            <p>{{ principles_recommendation_positive }}</p>
+            <h3>Critical Analysis</h3>
+            <p>{{ principles_recommendation_critical }}</p>
+        </div>
+
+        <div class="results">
+            <h2>Per Section Recommendations</h2>
+            {% for section, recommendations in section_recommendations.items() %}
+            <h3>{{ section }}</h3>
+            <h4>Positive Analysis</h4>
+            <p>{{ recommendations[0] }}</p>
+            <h4>Critical Analysis</h4>
+            <p>{{ recommendations[1] }}</p>
+            {% endfor %}
+        </div>
+
+        <div class="results">
+            <h2>Social Investor Principles</h2>
+            <h3>Positive Analysis</h3>
+            {{ principle_analysis_positive | safe }}
+            <h3>Critical Analysis</h3>
+            {{ principle_analysis_critical | safe }}
+        </div>
+    </div>
+</body>
+</html>
